@@ -1,0 +1,50 @@
+.popular-movie-img {
+  height: 200px;
+  width: 250px;
+}
+
+.popular-movie-title {
+  color: #263238;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.popular-movie-list-container {
+  list-style-type: none;
+  width: 470px;
+  margin: 8px;
+}
+
+.popular-movie-date {
+  color: #263238;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.popular-movie-rating {
+  color: #263238;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.popular-movie-date-span {
+  color: #3e2723;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.popular-movie-details-btn {
+  background-color: #1565c0;
+  color: white;
+  height: 40px;
+  width: 90px;
+  border-width: 0px;
+  border-radius: 10px;
+}
+
+.linkered {
+  text-decoration: none;
+}

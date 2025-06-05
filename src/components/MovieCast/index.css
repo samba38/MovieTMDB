@@ -1,0 +1,32 @@
+.cast-poster-img {
+  height: 100px;
+  width: 110px;
+}
+
+.movie-cast-details {
+  list-style-type: none;
+  margin: 80px;
+  height: 120px;
+  width: 190px;
+}
+
+.movie-cast-name {
+  color: #263238;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.movie-cast-charcter {
+  color: #263238;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.cast-movie-card-span {
+  color: #6d4c41;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+}

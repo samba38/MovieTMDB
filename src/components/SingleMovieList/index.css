@@ -1,0 +1,79 @@
+.single-movie-poster {
+  height: 310px;
+  width: 260px;
+  margin-right: 10px;
+}
+
+.single-movie-card {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.single-movie-card-heading {
+  color: #37474f;
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.single-movie-card-overview {
+  color: #546e7a;
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.single-movie-card-rating {
+  color: #263238;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.single-movie-card-duration {
+  color: #000000;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.single-movie-card-date {
+  color: #000000;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.single-movie-card-span {
+  color: #6d4c41;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.single-movie-card-desperation {
+  margin: 10px;
+  width: 60vw;
+}
+
+.gener-type {
+  color: #000000;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 5px;
+  margin-top: 20px;
+}
+
+.gener-side {
+  display: flex;
+}
+
+.single-movie-card-gener {
+  color: #6d4c41;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 10px;
+}
