@@ -1,5 +1,4 @@
-
-.unorder-searched-movie-list{
+.unorder-searched-movie-list {
   display: flex;
   flex-wrap: wrap;
 }
