@@ -16,7 +16,9 @@ const Header = props => {
   return (
     <nav className="movie-nav-container">
       <div className="movie-nav-container-cart">
-        <h1 className="movie-nav-container-heading">movieDB</h1>
+        <Link to="/" className="linker">
+          <h1 className="movie-nav-container-heading">movieDB</h1>
+        </Link>
       </div>
       <div className="movie-nav-container-cart">
         <div className="input-search-container">

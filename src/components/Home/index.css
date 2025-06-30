@@ -16,3 +16,36 @@
   text-align: center;
   margin: 10px;
 }
+
+.page-nav-btn {
+  background-color: #0288d1;
+  color: white;
+  height: 45px;
+  width: 90px;
+  border-width: 0px;
+  border-radius: 10px;
+}
+
+.page-naviga-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .popular-heading-movies {
+    color: #1a237e;
+    font-family: italic;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+  }
+  .unorder-popular-movie-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .page-naviga-card {
+    display: flex;
+    justify-content: space-between;
+  }
+}

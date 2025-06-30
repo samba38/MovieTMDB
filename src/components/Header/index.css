@@ -1,8 +1,9 @@
 .movie-nav-container {
   background-color: #37474f;
-  padding: 5px;
   display: flex;
   justify-content: space-between;
+  width: 100vw;
+  padding: 0px;
 }
 
 .movie-nav-container-heading {
@@ -69,4 +70,78 @@
   border-radius: 10px;
   height: 35px;
   width: 73px;
+}
+
+@media screen and (max-width: 769px) {
+  .movie-nav-container {
+    background-color: #37474f;
+    display: flex;
+    justify-content: space-between;
+    width: 205vw;
+  }
+  .movie-nav-container-heading {
+    color: white;
+    font-family: italic;
+    font-size: 20px;
+  }
+
+  .movie-nav-container-lists {
+    color: white;
+    font-family: Roboto;
+    font-size: 13px;
+    list-style-type: none;
+    margin: 6px;
+  }
+
+  .movie-nav-container-unorderList {
+    display: flex;
+  }
+
+  .nav-movie-icon {
+    color: white;
+    height: 20px;
+    width: 18px;
+    align-self: center;
+  }
+
+  .movie-nav-container-cart {
+    display: flex;
+  }
+
+  .movie-nav-container-search {
+    height: 30px;
+    width: 230px;
+    background-color: none;
+    border-width: 0px;
+    border: none;
+    outline: none;
+  }
+
+  .linker {
+    text-decoration: none;
+  }
+
+  .movie-nav-search-img {
+    color: black;
+    align-self: center;
+    height: 10px;
+    width: 15px;
+  }
+
+  .input-search-container {
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    align-self: center;
+    display: flex;
+  }
+
+  .movie-nav-search-btn {
+    background-color: blue;
+    color: white;
+    border-width: 0px;
+    border-radius: 10px;
+    height: 35px;
+    width: 73px;
+  }
 }

@@ -16,7 +16,9 @@ const SingleMovieList = props => {
   const renderItems = () => (
     <div className="gener-side">
       {generData.map(eachItem => (
-        <h1 className="gener-type">{eachItem.name}</h1>
+        <h1 className="gener-type" key={eachItem.id}>
+          {eachItem.name}
+        </h1>
       ))}
     </div>
   )

@@ -10,16 +10,40 @@ const apiStatusConstants = {
   inProgress: 'IN_PROGRESS',
 }
 class Home extends Component {
-  state = {popularList: [], apiStatus: apiStatusConstants.initial}
+  state = {
+    popularList: [],
+    apiStatus: apiStatusConstants.initial,
+    pageNumber: 1,
+  }
 
   componentDidMount() {
     this.getPopularDetails()
   }
 
+  onChangePageIncrese = () => {
+    this.setState(
+      prevState => ({pageNumber: prevState.pageNumber + 1}),
+      this.getPopularDetails,
+    )
+  }
+
+  onChangePageDcrese = () => {
+    const {pageNumber} = this.state
+    if (pageNumber > 1) {
+      this.setState(
+        prevState => ({pageNumber: prevState.pageNumber - 1}),
+        this.getPopularDetails,
+      )
+    } else {
+      this.setState({pageNumber: 1})
+    }
+  }
+
   getPopularDetails = async () => {
+    const {pageNumber} = this.state
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const keyApi = '674cce7d4bc2eb26acce98e23a8695f9'
-    const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${keyApi}&language=en-US&page=1`
+    const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${keyApi}&language=en-US&page=${pageNumber}`
     const response = await fetch(apiUrl)
     const fetchData = await response.json()
     console.log(fetchData)
@@ -30,7 +54,7 @@ class Home extends Component {
       originalLanguage: eachItem.original_language,
       originalTitle: eachItem.original_title,
       overview: eachItem.overview,
-      popularity: eachItem.popularList,
+      popularity: eachItem.popularity,
       posterPath: eachItem.poster_path,
       releaseDate: eachItem.release_date,
       title: eachItem.title,
@@ -49,15 +73,32 @@ class Home extends Component {
   )
 
   renderPopularMovieDetails = () => {
-    const {popularList} = this.state
+    const {popularList, pageNumber} = this.state
     return (
       <>
         <h1 className="popular-heading-movies">Popular</h1>
+        <p className="popular-heading-movies">{pageNumber}</p>
         <ul className="unorder-popular-movie-list">
           {popularList.map(eachList => (
             <PopularMovies key={eachList.id} popularDetails={eachList} />
           ))}
         </ul>
+        <div className="page-naviga-card">
+          <button
+            type="button"
+            className="page-nav-btn"
+            onClick={this.onChangePageDcrese}
+          >
+            previous
+          </button>
+          <button
+            type="button"
+            className="page-nav-btn"
+            onClick={this.onChangePageIncrese}
+          >
+            Next
+          </button>
+        </div>
       </>
     )
   }
